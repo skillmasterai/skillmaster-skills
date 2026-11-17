@@ -1,0 +1,15 @@
+{
+  "name": "skillmaster",
+  "description": "SkillMaster skills for AI coding agents",
+  "owner": {
+    "name": "SkillMaster",
+    "email": "github@skillmasterai.com"
+  },
+  "plugins": [
+    {
+      "name": "skillmaster",
+      "source": "./skills/skillmaster",
+      "description": "The entry point to the SkillMaster skill library: search, load, and publish agent skills."
+    }
+  ]
+}
