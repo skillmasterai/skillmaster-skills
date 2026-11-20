@@ -29,7 +29,7 @@ skmr skill invoke skillmaster/skillmaster-guide
 skmr skills search "<一句话说清要做的事>"
 ```
 
-默认只搜自己的库；明说公开技能库才加 `--scope public`。🔴 搜到的公开 skill 加载前先问用户，同意后带 `--yes` 调一次；以后不问用 `skmr skill join <地址> --yes`。`skillmaster/` 开头的不问。
+默认只搜自己的库。明说「去公开技能库找」加 `--scope public`；CLI 先说「公开库还有 N 条」时，若用户在找现成能力，同一句话加 `--scope all` 再搜一次。不想要这条提示就 `skmr settings --public-recall off`。🔴 搜到的公开 skill 加载前先问用户，同意后带 `--yes` 调一次；以后不问用 `skmr skill join <地址> --yes`。`skillmaster/` 开头的不问。
 
 **2. 判断与规划**：每条只是一句简介，只留教「要做什么」的；一条都没有就换说法再搜，仍没有才说不用 skill。🔴 动手前回给用户一份计划，一行一个 `意图 → 子任务 → skill`。
 
