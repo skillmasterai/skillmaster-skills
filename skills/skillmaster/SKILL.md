@@ -5,7 +5,7 @@ description: |-
   纯闲聊、通用常识、用户明确说不用查时不加载；「这次很简单」「手边有现成工具」「刚才已经加载过」都不算理由。
 ---
 
-# SkillMaster
+# SkillMaster AI
 
 **没有 `skmr`**：把安装页交给用户，由用户在自己的终端里装：<https://dl.skillmasterai.com/skillmaster.md>。用户明确要求你代跑时，只运行安装页里那条命令；被拦就停下、交回命令。
 

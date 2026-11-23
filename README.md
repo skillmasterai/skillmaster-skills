@@ -1,6 +1,6 @@
-# SkillMaster Skill
+# SkillMaster AI Skill
 
-The agent skill that makes SkillMaster the first place an agent looks: before starting a task, search the library for an existing way to do it.
+The agent skill that makes SkillMaster AI the first place an agent looks: before starting a task, search the library for an existing way to do it.
 
 ## Install
 
