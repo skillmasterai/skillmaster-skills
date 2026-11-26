@@ -5,11 +5,5 @@
     "name": "SkillMaster AI",
     "email": "github@skillmasterai.com"
   },
-  "plugins": [
-    {
-      "name": "skillmaster",
-      "source": "./skills/skillmaster",
-      "description": "The entry point to the SkillMaster AI skill library: search, load, and publish agent skills."
-    }
-  ]
+  "plugins": []
 }
