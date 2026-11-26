@@ -6,16 +6,18 @@
 
 ## Install
 
-Install the `skmr` client, then write the SkillMaster 守则 into your agent's global instruction file:
+Install the `skmr` client, then have your agent write the SkillMaster 守则 into its own global
+instruction file, after you say where:
 
 ```
-skmr install --file <your agent's global instruction file> --agent <agent name> --yes
-skmr install --check
+skmr self rule print                  # the rule text, verbatim
+skmr self rule check <that path>      # 当前 / 旧版 / 被改过 / 读不到 / 没有 / 不管
 ```
 
-If this machine still has an old `skillmaster` skill directory and already carries the rule,
-`skmr install` renames the directory to `skillmaster.disabled` and its `SKILL.md` to
-`SKILL.md.disabled` (a backup; no file is deleted) and the agent stops loading it.
+The agent asks first and writes into **its own** file (Claude Code `~/.claude/CLAUDE.md`, Codex
+`~/.codex/AGENTS.md`, WorkBuddy `MEMORY.md`, Cursor `~/.cursor/rules/*.mdc` with frontmatter). The
+CLI itself never writes it and keeps no record. If this machine still has an old `skillmaster`
+skill directory, remove it yourself; nothing deletes files for you.
 
 ## What the rule does
 
