@@ -1,31 +1,27 @@
 # SkillMaster AI Skill
 
-The agent skill that makes SkillMaster AI the first place an agent looks: before starting a task, search the library for an existing way to do it.
+> **The entry skill is retired (v94).** It is no longer published from this repository, and new
+> installs do not deliver it. The triggering rule now lives in the agent's own global instruction
+> file, written by the CLI — see [the install page](https://dl.skillmasterai.com/skillmaster.md).
 
 ## Install
 
-### Claude Code
+Install the `skmr` client, then write the SkillMaster 守则 into your agent's global instruction file:
 
 ```
-/plugin marketplace add skillmasterai/skillmaster-skills
-/plugin install skillmaster@skillmaster
+skmr install --file <your agent's global instruction file> --agent <agent name> --yes
+skmr install --check
 ```
 
-### Other agents
+If this machine still has an old `skillmaster` skill directory and already carries the rule,
+`skmr install` renames the directory to `skillmaster.disabled` and its `SKILL.md` to
+`SKILL.md.disabled` (a backup; no file is deleted) and the agent stops loading it.
 
-```
-npx skills add skillmasterai/skillmaster-skills
-```
+## What the rule does
 
-The skill is a single `SKILL.md`. It needs the `skmr` command-line client to search, load and publish skills. Install `skmr` from the official download page before using it:
-
-https://dl.skillmasterai.com/skillmaster.md
-
-## What the skill does
-
-- Searches your own library first; the public library only when you ask for it.
-- Loads a skill before changing it.
-- Plans multi-step work as `intent → subtask → skill` before acting.
+- Before starting a task, searches your own library first.
+- Asks before a search that involves personal privacy.
+- Asks `skmr help` before creating, changing, publishing, sharing or deleting a skill.
 
 ## Security
 
